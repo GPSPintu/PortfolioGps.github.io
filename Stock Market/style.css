@@ -1,0 +1,116 @@
+/* Body */
+body {
+    margin: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: #f7ecec;
+    color: #333;
+    }
+    
+    /* Header */
+    header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
+    
+    h1 {
+    margin: 0;
+    font-size: 36px;
+    letter-spacing: 2px;
+    }
+    
+    /* Main content */
+    main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+    
+    h2 {
+    margin-top: 30px;
+    font-size: 24px;
+    letter-spacing: 1px;
+    }
+    
+    label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 18px;
+    }
+    
+    input[type="text"],
+    input[type="date"],
+    input[type="number"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #333;
+    }
+    
+    button[type="submit"] {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    }
+    
+    table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 30px;
+    }
+    
+    th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+    font-size: 18px;
+    color: #333;
+    }
+    
+    th {
+    background-color: #333;
+    color: #fff;
+    font-size: 20px;
+    letter-spacing: 1px;
+    }
+    
+    #total-value, #total-returns {
+    font-weight: bold;
+    font-size: 18px;
+    color: #333;
+    }
+
+
+
+    #download-btn {
+        display: block;
+        margin: 0 auto;
+        padding: 10px 20px;
+        background-color: #011101;
+        color: #fff;
+        font-size: 16px;
+        font-weight: bold;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+      }
+      
+      #download-btn:hover {
+        background-color: #3e8e41;
+      }
+      

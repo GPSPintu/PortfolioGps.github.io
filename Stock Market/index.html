@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Portfolio Tracker</title>
+    <!-- CSS stylesheets -->
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <h1>Portfolio Tracker</h1>
+      <!-- other header elements, such as login/logout buttons -->
+    </header>
+    <main>
+      <h2>Add a new holding</h2>
+      <form id="holding-form">
+        <label for="ticker">Stock Name:</label>
+        <input type="text" id="ticker" name="ticker" required>
+        <label for="date">Purchase date:</label>
+        <input type="date" id="date" name="date" required>
+        <label for="price">Purchase price:</label>
+        <input type="number" id="price" name="price" step="0.01" required>
+        <label for="shares">Number of shares:</label>
+        <input type="number" id="shares" name="shares" step="0.01" required>
+        <button type="submit">Add holding</button>
+      </form>
+      <h2>Portfolio holdings</h2>
+      <table id="portfolio-table">
+        <thead>
+          <tr>
+            <th>Stocks</th>
+            <th>Purchase price</th>
+            <th>Shares</th>
+            <th>Market value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- portfolio rows will be added dynamically via JavaScript -->
+        </tbody>
+      </table>
+      <h2>Total portfolio value</h2>
+      <p>Total value: <span id="total-value">0.00</span></p>
+      <p>Total returns: <span id="total-returns">0.00</span></p>
+    </main>
+
+    <!-- JavaScript scripts -->
+    <script src="script.js"></script>
+  </body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>PDF Example</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+  </head>
+  <body>
+    <h3>PDF Example</h3>
+    <div id="pdf-content">
+      <p>This is Yours Portfolio.</p>
+    </div>
+    <button id="download-btn">Download PDF by Gps</button>
+    <script>
+      const downloadBtn = document.getElementById("download-btn");
+      downloadBtn.addEventListener("click", () => {
+        // Get the HTML element to convert to PDF
+        const element = document.getElementById("pdf-content");
+
+        // Create a new jsPDF instance
+        const pdf = new jsPDF();
+
+        // Convert HTML element to PDF
+        pdf.html(element, {
+          callback: function () {
+            // Save the PDF and download it
+            pdf.save("my-pdf-document.pdf");
+          },
+        });
+      });
+    </script>
+  </body>
+</html>
